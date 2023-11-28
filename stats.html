@@ -1,13 +1,13 @@
 ---
 layout: default
-title: "Users"
+title: "Stats"
 css: []
-js: ["index"]
+js: ["stats"]
 ---
 
 <section class="card">
     <div class="cardInner">
-        <div class="cardTitle">New User</div>
+        <div class="cardTitle">New Stat</div>
         <form class="cardForm" action="/users/new.php">
             <input type="text" name="first_name" placeholder="First Name" required aria-label="First Name">
             <input type="text" name="last_name" placeholder="Last Name" required aria-label="Last Name">
@@ -26,18 +26,20 @@ js: ["index"]
                 <option value="student">Teacher</option>
                 <option value="admin">Admin</option>
             </select>
-            <button class="button">Create User</button>
+            <button class="button">Add User</button>
         </form>
     </div>
 </section>
 
 <section id="users" class="card scroll">
     <div class="cardInner">
-        <div class="cardTitle">Users</div>
+        <div class="cardTitle">Stats</div>
         <table id="usersTable" class="table">
             <thead>
             <tr>
-                <td>User ID</td>
+                <td>Beacon ID</td>
+
+
                 <td>First Name</td>
                 <td>Last Name</td>
                 <td>Email</td>

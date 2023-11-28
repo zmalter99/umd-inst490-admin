@@ -323,7 +323,6 @@ Table
 
 .table tbody tr:hover {
     background-color: #f3ece8;
-    cursor: pointer;
 }
 
 .table td {

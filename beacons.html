@@ -1,0 +1,35 @@
+---
+layout: default
+title: "Beacons"
+css: []
+js: ["beacons"]
+---
+
+<section class="card">
+    <div class="cardInner">
+        <div class="cardTitle">New Beacon</div>
+        <form class="cardForm" action="/beacons/new.php">
+            <input type="text" name="user_id" placeholder="User ID" required aria-label="User ID">
+            <input type="text" name="interact" placeholder="Interact" required aria-label="Interact">
+            <input type="text" name="details" placeholder="Details" required aria-label="Details">
+            <button class="button">Create Beacon</button>
+        </form>
+    </div>
+</section>
+
+<section id="beacons" class="card scroll">
+    <div class="cardInner">
+        <div class="cardTitle">Beacons</div>
+        <table id="beaconsTable" class="table">
+            <thead>
+            <tr>
+                <td>Beacon ID</td>
+                <td>User ID</td>
+                <td>Interact</td>
+                <td>Details</td>
+            </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+</section>

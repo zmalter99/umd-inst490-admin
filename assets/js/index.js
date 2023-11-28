@@ -9,6 +9,7 @@
         // add to table
         document.querySelector("#usersTable tbody").insertAdjacentHTML('beforeend', `
             <tr>
+                <td>${user._id.$oid}</td>
                 <td>${user.first_name}</td>
                 <td>${user.last_name}</td>
                 <td>${user.email}</td>
