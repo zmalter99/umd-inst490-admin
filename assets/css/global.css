@@ -1,0 +1,185 @@
+/**********************
+Global
+**********************/
+
+:root {
+    --primary: #ff6700;
+    --black: #231f20;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--black);
+}
+
+body.noScroll {
+    overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    display: block;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: left;
+    border: none;
+}
+
+input,
+select,
+textarea {
+    border: 1px solid lightgray;
+    padding: 10px;
+}
+
+select {
+    padding: 8px 34px 8px 10px;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right .75rem center;
+    background-size: 16px 12px;
+}
+
+textarea {
+    resize: none;
+}
+
+img,
+picture,
+video {
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+dialog {
+    padding: 0;
+    max-width: none;
+    max-height: none;
+    border: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+dialog[open] {
+    display: flex;
+}
+
+/************
+Button Loading 
+************/
+
+.button {
+    background-color: var(--black);
+    color: white;
+    border-radius: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 18px;
+    padding: 15px 45px;
+    max-width: 330px;
+    appearance: none;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+}
+
+.button.center {
+    margin: auto;
+}
+
+.button.loading {
+    position: relative !important;
+    pointer-events: none !important;
+    color: transparent !important;
+}
+
+.button.loading::after {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border: 4px solid transparent;
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: loading 1s ease infinite;
+}
+
+@keyframes loading {
+    from {
+        transform: rotate(0turn);
+    }
+
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+@media (max-width: 800px) {
+    .button {
+        max-width: none;
+    }
+}
+
+
+/*************
+RTE
+ */
+
+.rte h1,
+.rte h2,
+.rte h3,
+.rte h4,
+.rte h5,
+.rte h6,
+.rte p {
+    font-size: revert;
+    margin: revert;
+}
+
+
+/*******************
+Container
+ */
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
