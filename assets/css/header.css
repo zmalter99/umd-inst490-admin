@@ -1,0 +1,40 @@
+/***********
+Header
+ */
+
+#header {
+    padding: 20px 40px;
+    box-shadow: 0 2px 5px rgb(0 0 0 / 10%);
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#headerTitle {
+    font-weight: 500;
+    display: block;
+}
+
+#headerNav {
+    display: flex;
+    gap: 10px 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.headerNavLink {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+@media (max-width: 800px) {
+    #header {
+        display: block;
+    }
+
+    #headerTitle {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}

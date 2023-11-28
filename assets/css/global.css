@@ -3,7 +3,7 @@ Global
 **********************/
 
 :root {
-    --primary: #ff6700;
+    --primary: #af6247;
     --black: #231f20;
 }
 
@@ -18,7 +18,7 @@ html {
 body {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
-    padding: 0;
+    background-color: #F4F7F9;
     color: var(--black);
 }
 
@@ -102,7 +102,7 @@ Button Loading
 ************/
 
 .button {
-    background-color: var(--black);
+    background-color: var(--primary);
     color: white;
     border-radius: 10px;
     text-transform: uppercase;
@@ -182,4 +182,169 @@ Container
 .container {
     max-width: 1200px;
     margin: auto;
+}
+
+
+/*****
+Main
+ */
+
+main {
+    padding: 20px;
+    display: grid;
+    row-gap: 20px;
+}
+
+main.loading > section {
+    position: relative;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+main.loading::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border: 7px solid transparent;
+    border-top-color: var(--black);
+    border-radius: 50%;
+    animation: loading 1s ease infinite;
+}
+
+/*******
+Card
+ ****/
+
+.card {
+    font-size: 14px;
+    background-color: white;
+    box-shadow: 0 0 20px rgb(8 21 66 / 5%);
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.card.scroll {
+    overflow-x: auto;
+}
+
+.cardInner {
+    padding: 10px;
+    min-width: fit-content;
+}
+
+.cardTitle {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.cardBody {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.cardForm {
+    display: grid;
+    row-gap: 10px;
+    max-width: 600px;
+}
+
+.cardForm input {
+    padding: .375rem 2.25rem .375rem .75rem;
+    font-size: 16px;
+    color: #212529;
+    background-size: 16px 12px;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    appearance: none;
+}
+
+.cardForm select {
+    padding: .375rem 2.25rem .375rem .75rem;
+    font-size: 16px;
+    color: #212529;
+    background-color: #fff;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right .75rem center;
+    background-size: 16px 12px;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    appearance: none;
+}
+
+.cardForm input:focus,
+.cardForm select:focus {
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+}
+
+
+@media (max-width: 800px) {
+    .card {
+        padding: 20px;
+    }
+}
+
+/***************
+Table
+ */
+
+.table {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.table thead {
+    font-weight: 800;
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+
+.table tbody tr {
+    transition: 0.3s;
+}
+
+.table tbody tr:nth-of-type(odd) {
+    background-color: #ECF1F5
+}
+
+.table tbody tr:nth-of-type(even) {
+    background-color: #F4F7F9
+}
+
+.table tbody tr:hover {
+    background-color: #f3ece8;
+    cursor: pointer;
+}
+
+.table td {
+    padding: 10px;
+    white-space: nowrap;
+    font-size: 16px;
+}
+
+.table td a {
+    text-decoration: underline;
+}
+
+/*****************
+Swal
+********************/
+
+.swal2-select,
+.swal2-actions button {
+    width: auto;
+}
+
+.swal2-html-container {
+    text-align: left;
 }
