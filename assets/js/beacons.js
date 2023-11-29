@@ -1,19 +1,21 @@
-// setup stats page
+// setup beacons page
 (async function () {
-    // get stats
-    const stats = await fetch(`${root}/stats/get.php`)
+    // get beacons
+    const beacons = await fetch(`${root}/beacons/get.php`)
         .then(response => response.json());
 
-    // for every stat
-    stats.forEach(stat => {
+    // for every beacon
+    beacons.forEach(beacon => {
         // add to table
-        document.querySelector("#statsTable tbody").insertAdjacentHTML('beforeend', `
+        document.querySelector("#beaconsTable tbody").insertAdjacentHTML('beforeend', `
             <tr>
-                <td>${stat._id.$oid}</td>
-                <td>${stat.beacon_id}</td>
-                <td>${stat.user_id}</td>
-                <td>${stat.interact}</td>
-                <td>${stat.details}</td>
+                <td>${beacon._id.$oid}</td>
+                <td>${beacon.title}</td>
+                <td>${beacon.latitude}</td>
+                <td>${beacon.longitude}</td>
+                <td>${beacon.address}</td>
+                <td>${beacon.description}</td>
+                <td>${beacon.status}</td>
             </tr>
         `);
     });

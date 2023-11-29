@@ -303,7 +303,7 @@ Table
 }
 
 .table thead {
-    font-weight: 800;
+    font-weight: 500;
     position: sticky;
     top: 0;
     background-color: white;
