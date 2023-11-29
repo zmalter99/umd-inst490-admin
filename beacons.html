@@ -9,9 +9,17 @@ js: ["beacons"]
     <div class="cardInner">
         <div class="cardTitle">New Beacon</div>
         <form class="cardForm" action="/beacons/new.php">
-            <input type="text" name="user_id" placeholder="User ID" required aria-label="User ID">
-            <input type="text" name="interact" placeholder="Interact" required aria-label="Interact">
-            <input type="text" name="details" placeholder="Details" required aria-label="Details">
+            <input type="text" name="title" placeholder="Title" required aria-label="Title">
+            <input type="text" name="latitude" placeholder="Latitude" required aria-label="Latitude">
+            <input type="text" name="longitude" placeholder="Longitude" required aria-label="Longitude">
+            <input type="text" name="address" placeholder="Address" required aria-label="Address">
+            <input type="text" name="description" placeholder="Description" required aria-label="Description">
+            <select name="status" required aria-label="Status">
+                <option selected disabled>Select Status</option>
+                <option value="Active">Active</option>
+                <option value="Inactive">Inactive</option>
+                <option value="Under Maintenance">Under Maintenance</option>
+            </select>
             <button class="button">Create Beacon</button>
         </form>
     </div>
@@ -23,6 +31,7 @@ js: ["beacons"]
         <table id="beaconsTable" class="table">
             <thead>
             <tr>
+                <td>Stat ID</td>
                 <td>Beacon ID</td>
                 <td>User ID</td>
                 <td>Interact</td>

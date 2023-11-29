@@ -8,44 +8,27 @@ js: ["stats"]
 <section class="card">
     <div class="cardInner">
         <div class="cardTitle">New Stat</div>
-        <form class="cardForm" action="/users/new.php">
-            <input type="text" name="first_name" placeholder="First Name" required aria-label="First Name">
-            <input type="text" name="last_name" placeholder="Last Name" required aria-label="Last Name">
-            <input type="email" name="email" placeholder="Email" required aria-label="Email">
-            <select name="gender" required aria-label="Gender">
-                <option selected disabled>Select Gender</option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-                <option value="other">Other</option>
-            </select>
-            <input type="text" name="major" placeholder="Major" required aria-label="Major">
-            <input type="password" name="password" placeholder="Password" required aria-label="Password">
-            <select name="role" required aria-label="Role">
-                <option selected disabled>Select Role</option>
-                <option value="student">Student</option>
-                <option value="student">Teacher</option>
-                <option value="admin">Admin</option>
-            </select>
-            <button class="button">Add User</button>
+        <form class="cardForm" action="/stats/new.php">
+            <input type="text" name="beacon_id" placeholder="Beacon ID" required aria-label="Beacon ID">
+            <input type="text" name="user_id" placeholder="User ID" required aria-label="User ID">
+            <input type="text" name="interact" placeholder="Interact" required aria-label="Interact">
+            <input type="text" name="details" placeholder="Details" required aria-label="Details">
+            <button class="button">Create Stat</button>
         </form>
     </div>
 </section>
 
-<section id="users" class="card scroll">
+<section id="stats" class="card scroll">
     <div class="cardInner">
         <div class="cardTitle">Stats</div>
-        <table id="usersTable" class="table">
+        <table id="statsTable" class="table">
             <thead>
             <tr>
+                <td>Stat ID</td>
                 <td>Beacon ID</td>
-
-
-                <td>First Name</td>
-                <td>Last Name</td>
-                <td>Email</td>
-                <td>Gender</td>
-                <td>Major</td>
-                <td>Role</td>
+                <td>User ID</td>
+                <td>Interact</td>
+                <td>Details</td>
             </tr>
             </thead>
             <tbody></tbody>

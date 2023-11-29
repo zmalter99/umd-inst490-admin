@@ -22,6 +22,9 @@ document.querySelectorAll(".cardForm").forEach(form => {
         })
             .then(response => response.json());
 
+        // stop loading
+        this.querySelector("button").classList.remove("loading");
+
         // check for errors
         if (response.error) {
             await Swal.fire({
