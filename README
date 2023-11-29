@@ -1,0 +1,7 @@
+# INST490 Admin
+
+Run locally by:
+
+```
+bundle exec jekyll serve -l
+```
