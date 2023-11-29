@@ -1,4 +1,4 @@
-// root request url
+// root request url (local + prod)
 //const root = 'http://localhost:3000';
 const root = 'https://inst490-455887a80ae4.herokuapp.com';
 
