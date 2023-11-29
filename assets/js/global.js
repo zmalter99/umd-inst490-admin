@@ -1,5 +1,6 @@
 // root request url
-const root = 'http://localhost:3000';
+//const root = 'http://localhost:3000';
+const root = 'https://inst490-455887a80ae4.herokuapp.com';
 
 // submit all forms
 document.querySelectorAll(".cardForm").forEach(form => {
